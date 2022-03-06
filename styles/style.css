@@ -5,7 +5,70 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
+    padding: 0;
+    margin: 0;
 }
+
+/*----------------------------------
+         Header design  
+ -----------------------------*/
+
+.header{
+    background-color: #562EFF;
+    height: 85px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-container
+{
+    width: 930px;
+    display: flex;
+    align-items: center;
+}
+
+/*-------- Header logo -----------*/
+.header-logo{
+    display: flex;
+    align-items: flex-end;
+}
+.logo{
+    margin-right: 15px;
+}
+.header-logo .logo img{
+    width: 100%;
+    height: 50px;
+}
+
+/* Header Navbar */
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 830px;
+
+}
+.nav-items{
+    display: flex;
+    list-style: none;
+
+}
+.nav-element{
+    margin-right: 40px;
+    color: white;
+}
+
+.navbar .profile-pic img{
+    width: 100%;
+    height: 50px;
+}
+
+
+/* --------------------------------
+        main fleld design 
+ ------------------------------*/
+
 main{
     display: flex;
     flex-direction: column;
@@ -23,7 +86,9 @@ hr{
     margin-bottom: 27px;
 }
 
-/* top players style */
+/*-----------------------------------
+           top players style
+------------------------------------- */
 .top-players{
     margin-bottom: 30px;
 }
@@ -50,7 +115,9 @@ hr{
     margin-left: 16px;
     font-size: 18px;
 }
-/* Top blog styles */
+/* --------------------------
+       Top blog styles 
+-------------------------------*/
 .blogs{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -132,6 +199,21 @@ hr{
 ---------------------*/
 
 @media only screen and (max-width:688px) {
+    .header{
+        width: 100%;
+    }
+    .header-container{
+        width: 350px;
+    }
+    .navbar{
+        width: 300px;
+    }
+    .nav-items ,.header-logo{
+        flex-direction: column;
+    }
+    .header-logo, .navbar{
+        grid-template-columns: repeat(1,1fr);
+    }
     .container{
         width: 100%;
     }
@@ -150,9 +232,25 @@ hr{
 ---------------------*/
 
 @media only screen and (min-width:688px) and (max-width:992px) {
+    .header{
+        width: 100%;
+    }
+    .header-container{
+        width: 350px;
+    }
+    .navbar{
+        width: 300px;
+    }
+    .nav-items ,.header-logo{
+        flex-direction: column;
+    }
+    .header-logo, .navbar{
+        grid-template-columns: repeat(1,1fr);
+    }
     .container{
         width: 100%;
     }
+
     .players, .blogs, .courses{
         grid-template-columns: repeat(2,1fr);
     }
